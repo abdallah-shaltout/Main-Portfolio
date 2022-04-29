@@ -35,8 +35,12 @@ let Comment_ele = document.createComment(
 );
 document.querySelector("footer div").before(Comment_ele);
 
-function works_content(github_username) {
+function works_content() {
     if (document.title == "Works") {
+        let demo_link = document.querySelector(".demo");
+        demo_link.addEventListener("click", () => {
+            window.open("/projects/project-1/index.html");
+        });
     }
 }
-works_content("abdallah-shaltout");
+works_content();
