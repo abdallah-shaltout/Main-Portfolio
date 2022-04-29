@@ -1,0 +1,52 @@
+$main_color: #7562e0;
+$dark_color: #1c1c6b;
+$disable_color: #cbcad8;
+$white_color1: #ffffff;
+$white_color2: #fafbfd;
+$white_color3: #f7f7f7;
+$white_color4: #edeafb;
+$padding_section: 60px 0;
+$padding1: 0 20px;
+$box_shadow2: 0 0 10px rgba(0, 0, 0, 0.2);
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    color: $dark_color;
+}
+.container {
+    width: 95%;
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+    .container {
+        width: 85%;
+        margin: 0 auto;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 80%;
+        max-width: 1170px;
+        margin: 0 auto;
+    }
+}
+@mixin flex_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex_between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin grid-columns($min, $max, $gap) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax($min, $max));
+    gap: $gap;
+}

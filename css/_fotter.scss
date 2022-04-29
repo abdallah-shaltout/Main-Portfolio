@@ -1,0 +1,28 @@
+footer {
+    background-color: $main_color;
+    padding: 20px 0;
+    .container {
+        .copy-right {
+            color: $white_color3;
+            font-size: 1.1rem;
+            & :first-child {
+                color: red;
+                font-weight: bold;
+                font-size: 1.25rem;
+            }
+            span {
+                font-weight: 900;
+                color: $white_color1;
+                font-size: 1.105rem;
+            }
+        }
+    }
+}
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
