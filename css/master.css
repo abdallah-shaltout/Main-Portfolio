@@ -730,8 +730,10 @@ article .works .container .box .content .btns {
   margin-top: 10px;
 }
 
-article .works .container .box .content .btns button {
+article .works .container .box .content .btns button,
+article .works .container .box .content .btns a {
   border: none;
+  text-decoration: none;
   padding: 10px 20px;
   border-radius: 3px;
   background-color: #ffffff;
@@ -741,7 +743,8 @@ article .works .container .box .content .btns button {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-article .works .container .box .content .btns button:hover {
+article .works .container .box .content .btns button:hover,
+article .works .container .box .content .btns a:hover {
   background-color: #1c1c6b;
   color: #ffffff;
 }

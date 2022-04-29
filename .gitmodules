@@ -1,0 +1,6 @@
+[submodule "Fetch-Repositories"]
+	path = Fetch-Repositories
+	url = https://github.com/abdallah-shaltout/Fetch-Repositories
+[submodule "projects/Fetch-Repositories"]
+	path = projects/Fetch-Repositories
+	url = https://github.com/abdallah-shaltout/Fetch-Repositories

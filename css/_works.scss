@@ -25,8 +25,10 @@ article {
                     .btns {
                         @include flex_between;
                         margin-top: 10px;
-                        button {
+                        button,
+                        a {
                             border: none;
+                            text-decoration: none;
                             padding: 10px 20px;
                             border-radius: 3px;
                             background-color: $white_color1;
@@ -55,7 +57,10 @@ article {
 @media (min-width: 1200px) {
     article {
         .container {
-            grid-template-columns: repeat(auto-fill,minmax(300px,1fr)) !important;
+            grid-template-columns: repeat(
+                auto-fill,
+                minmax(300px, 1fr)
+            ) !important;
         }
     }
 }
