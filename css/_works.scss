@@ -25,7 +25,6 @@ article {
                     .btns {
                         @include flex_between;
                         margin-top: 10px;
-                        button,
                         a {
                             border: none;
                             text-decoration: none;
