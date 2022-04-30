@@ -348,7 +348,7 @@ article .service .container .content {
   margin: 30px auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
+  -ms-grid-columns: repeat(2, 1fr);
       grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
@@ -478,10 +478,11 @@ article .contact .container p {
   margin: 40px 0;
 }
 
-article .contact .container button {
+article .contact .container a {
   border: 0;
   background-color: #7562e0;
   padding: 15px 40px;
+  text-decoration: none;
   color: #fafbfd;
   font-weight: 900;
   -webkit-transition: background-color 0.3s ease;
@@ -489,7 +490,7 @@ article .contact .container button {
   cursor: pointer;
 }
 
-article .contact .container button:hover {
+article .contact .container a:hover {
   background-color: #1c1c6b;
 }
 
@@ -588,7 +589,7 @@ article .contact .container button:hover {
   }
   article .service .container .content {
     width: 90%;
-    -ms-grid-columns: (1fr)[2];
+    -ms-grid-columns: repeat(2, 1fr);
         grid-template-columns: repeat(2, 1fr);
   }
   article .service .container .content .box {
@@ -621,7 +622,7 @@ article .contact .container button:hover {
   article .service .container .content {
     width: 100%;
     margin: 30px auto;
-    -ms-grid-columns: (1fr)[4];
+    -ms-grid-columns: repeat(4, 1fr);
         grid-template-columns: repeat(4, 1fr);
   }
   article .service .container .content .box:first-child {
@@ -667,6 +668,12 @@ article .contact .container button:hover {
     height: 650px !important;
   }
 }
+@media (min-width: 1600px) and (min-height: 900px) {
+  article .landing::before {
+    width: 700px !important;
+    height: 700px !important;
+  }
+}
 
 footer {
   background-color: #7562e0;
@@ -694,7 +701,7 @@ article .works .container {
   padding: 60px 0;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(250px, 1fr))[auto-fill];
+  -ms-grid-columns: repeat(auto-fill, minmax(250px, 1fr));
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
 }
@@ -746,8 +753,10 @@ article .works .container .box .content .btns a {
   background-color: #ffffff;
   cursor: pointer;
   font-weight: bold;
-  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-transition: background-color 0.3s ease,
+ color 0.3s ease;
+  transition: background-color 0.3s ease,
+ color 0.3s ease;
 }
 
 article .works .container .box .content .btns a:hover {
@@ -757,7 +766,7 @@ article .works .container .box .content .btns a:hover {
 
 @media (min-width: 1200px) {
   article .container {
-    -ms-grid-columns: (minmax(300px, 1fr))[auto-fill] !important;
+    -ms-grid-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
   }
 }
