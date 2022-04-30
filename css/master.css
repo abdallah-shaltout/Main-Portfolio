@@ -420,6 +420,7 @@ article .service .container .content .box:nth-child(2) .discover {
   font-weight: 100;
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
+  text-decoration: none !important;
   color: #cbcad8;
   cursor: pointer;
 }
@@ -660,6 +661,13 @@ article .contact .container button:hover {
   }
 }
 
+@media (min-width: 1400px) and (min-height: 900px) {
+  article .landing::before {
+    width: 650px !important;
+    height: 650px !important;
+  }
+}
+
 footer {
   background-color: #7562e0;
   padding: 20px 0;
@@ -730,7 +738,6 @@ article .works .container .box .content .btns {
   margin-top: 10px;
 }
 
-article .works .container .box .content .btns button,
 article .works .container .box .content .btns a {
   border: none;
   text-decoration: none;
@@ -743,7 +750,6 @@ article .works .container .box .content .btns a {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-article .works .container .box .content .btns button:hover,
 article .works .container .box .content .btns a:hover {
   background-color: #1c1c6b;
   color: #ffffff;
