@@ -1,0 +1,182 @@
+:root {
+  --main-color: #03a9f4;
+  --second-color: #f44336;
+  --background-primary: #15141a;
+  --background-secondary: #23222b;
+  --background-tertiary: #2b2a33;
+  --text-primary: #fbfbfe;
+  --text-secondary: #cfcfd8;
+  --button-primary-default: #fbfbfe;
+  --button-primary-hover: #cfcfd8;
+  --button-primary-active: #9f9fad;
+  --text-link: #15141a;
+  --icon-success: #39a038;
+  --shadow-02: 0px 1px 10px rgba(251, 251, 254, 0.2);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background-primary);
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+.get-repo {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: var(--background-secondary);
+  display: flex;
+}
+.get-repo input {
+  padding: 15px 20px;
+  border: none;
+  width: 100%;
+  font-size: 20px;
+  height: 54px;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: transparent;
+  transition: border-bottom-color 0.5s ease;
+  border-radius: 4px;
+}
+.get-repo input:focus,
+.get-repo input:hover {
+  outline: 0;
+  border-bottom-color: var(--main-color);
+}
+.get-repo .get-btn {
+  width: 140px;
+  margin-left: 10px;
+  height: 54px;
+  background-color: #2196f3;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  line-height: 54px;
+  border-radius: 6px;
+  transition: 0.4s ease;
+}
+.get-repo .get-btn:hover {
+  background-color: #468df3;
+  box-shadow: var(--shadow-02);
+}
+.show-data {
+  background-color: var(--background-secondary);
+  padding: 20px;
+  font-weight: bold;
+}
+.show-data > span {
+  color: var(--text-secondary);
+}
+.text-red {
+  color: var(--second-color) !important;
+}
+.show-data .repodiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--background-tertiary);
+  color: var(--text-primary);
+}
+
+.show-data .repodiv:not(:last-of-type) {
+  border-bottom: 1px solid var(--button-primary-active);
+  margin-bottom: 10px;
+}
+.show-data .repodiv a {
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 15px;
+  background-color: var(--button-primary-default);
+  color: var(--text-link);
+  border-radius: 4px;
+  text-align: center;
+  transition: background-color 0.4s ease-in-out;
+}
+.show-data .repodiv a:hover {
+  background-color: var(--button-primary-hover);
+}
+
+.show-data .repodiv :nth-child(2) {
+  text-align: center;
+  background-color: var(--icon-success);
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 4px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: 10px;
+  min-width: 120px;
+  cursor: default;
+}
+footer {
+  background-color: var(--background-secondary);
+  padding: 20px;
+  color: #fff;
+  margin-top: 20px;
+}
+footer .container p span {
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+footer .container p span:hover {
+  color: #468df3;
+}
+
+/* Start Media */
+@media (max-width: 768px) {
+  body
+  {
+    font-size: 13px !important;
+  }
+  .container {
+    width: 95%;
+  }
+  .get-repo {
+    padding: 10px;
+  }
+  .get-repo input {
+    padding: 5px 8px;
+    height: 30px;
+    border-bottom-width: 1px;
+    font-size: 13px;
+  }
+  .get-repo .get-btn {
+    width: 100px;
+    margin-left: 5px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 2px;
+    padding: 0 3px;
+  }
+  .show-data
+  {
+    padding: 10px;
+  }
+  .repodiv p
+  {
+    font-size: 14px;
+    margin-right: 10px;
+    line-height: 1.6;
+  }
+  .show-data .repodiv :nth-child(2)
+  {
+    margin-right: 5px;
+    padding: 5px 10px;
+    min-width: 80px;
+  }
+  .show-data .repodiv a
+  {
+    padding: 5px 10px;
+    border-radius: 2px;
+  }
+}
+/* End Media */

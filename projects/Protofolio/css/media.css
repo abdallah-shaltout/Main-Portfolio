@@ -1,0 +1,304 @@
+/* -------------------------------x-larg Media start------------------------------- */
+@media screen and (min-width: 1201px) {
+  .container {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .home {
+    position: relative;
+  }
+  .home .container {
+    position: absolute;
+    top: 35%;
+    left: 15%;
+    transform: translateY(-35%);
+  }
+  .services .container .boxs {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .services .container .boxs .box {
+    height: 400px;
+  }
+  .about .container .info h1 {
+    font-size: 70px;
+  }
+  .about .container .info p {
+    max-width: 70%;
+    font-size: 25px;
+  }
+  .protofolio .container .boxs {
+    grid-template-columns: repeat(4, minmax(300px, 1fr));
+    grid-template-rows: repeat(2, minmax(200px, 1fr));
+  }
+  .protofolio .container .boxs .box {
+    height: auto;
+  }
+  .contact .container .main-contact .main-form input {
+    width: 450px;
+  }
+  .contact .container .main-contact .main-form textarea {
+    width: 450px;
+  }
+}
+/* -------------------------------x-larg Media End------------------------------- */
+/* -------------------------------larg Media start------------------------------- */
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .protofolio .container .boxs {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+/* -------------------------------larg Media end------------------------------- */
+/* -------------------------------Median Media Start------------------------------- */
+@media screen and (max-width: 992px) {
+  .container {
+    width: 90%;
+  }
+  /* home section Start */
+  .home {
+    position: relative;
+  }
+  .home .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  /* home section End */
+  /* about section Start */
+  .about .container .info {
+    flex: unset;
+  }
+  /* about section End */
+  /* protofolio section Start */
+  .protofolio .container .boxs {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, minmax(150px, 200px));
+  }
+  .protofolio .container .boxs .box {
+    height: auto;
+  }
+  /* protofolio section End */
+  /* contact section Start */
+  .contact .container {
+    width: 90%;
+    height: 100%;
+    position: relative;
+  }
+  .contact .container .main-contact {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+  }
+  /* contact section End */
+}
+/* -------------------------------Median Media End------------------------------- */
+/* -------------------------------Small Media Start------------------------------- */
+@media screen and (max-width: 768px) {
+  /* Services Section Start */
+  .services {
+    height: 200vh;
+  }
+  .services .container .boxs {
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    gap: 10px;
+    margin-top: 0;
+    transform: translateY(0);
+    height: 70%;
+    padding: 20px;
+  }
+  .services .container .boxs .box {
+    height: unset;
+  }
+  /* Services Section End */
+  .container {
+    width: 90%;
+  }
+  /* About Section Start */
+  .about {
+    position: relative;
+  }
+  .about .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .about .container .image {
+    height: 400px;
+  }
+  .about .container .info {
+    order: 2;
+    flex: 0;
+  }
+  .about .container .info p {
+    width: 100%;
+  }
+  /* About Section End */
+  /* Protofolio Section Start */
+  .protofolio .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .protofolio .container .boxs {
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 15%;
+    grid-template-rows: repeat(4, minmax(150px, 1fr));
+  }
+  .protofolio .container .boxs .box {
+    height: auto;
+  }
+  /* Protofolio Section End */
+  /* Contact Section Start */
+  .container .container
+  {
+    height: unset;
+    position: static;
+  }
+  .contact .container .main-contact
+  {
+    position: static;
+    top: unset;
+    transform: translateY(0);
+    width: unset;
+  }
+  .contact .container .main-contact .image {
+    display: none;
+  }
+  .contact .container .main-contact .main-form {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .contact .container .main-contact .main-form input,
+  .contact .container .main-contact .main-form textarea {
+    width: 100%;
+  }
+  /* Contact Section End */
+}
+/* -------------------------------Small Media End------------------------------- */
+/* -------------------------------Mobile Media Start------------------------------- */
+@media screen and (max-width: 576px) {
+  .container {
+    width: 95%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  /* Header Start */
+  .logo {
+    width: 100%;
+  }
+  .header .container .nav-bar {
+    margin: 0 auto;
+  }
+  .header .container .nav-bar > li > a {
+    margin: 0;
+    padding: 0 15px;
+    height: 50px;
+  }
+  /* Header End */
+  /* Home Section Start */
+  .home {
+    max-height: calc(100vh - 97px);
+    position: relative;
+  }
+  .home .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .home .container .info {
+    width: 100%;
+    padding: 20px;
+  }
+  .home .container .info h1 {
+    font-size: 30px;
+    line-height: 1.4;
+    text-align: center;
+  }
+  .home .container .info p {
+    max-width: 100%;
+    text-align: center;
+    font-size: 14px;
+  }
+  /* Home Section End */
+  /* Services Section Start */
+  .services {
+    max-height: 200vh;
+  }
+  .special-head h1 {
+    font-size: 40px;
+  }
+  .services .container .boxs {
+    margin-top: 0;
+    transform: translateY(0);
+    padding: 20px;
+    grid-template-rows: repeat(3,1fr);
+  }
+  .services .container .boxs .box {
+    height: unset;
+  }
+  /* Services Section End */
+  /* About Section Start */
+  .about {
+    max-height: 100vh;
+    position: relative;
+  }
+  .about .container {
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+  }
+  .about .container .image {
+    max-width: 100%;
+    height: 350px;
+  }
+  .about .container .info {
+    order: 2;
+    padding: 10px;
+  }
+  .about .container .info p {
+    max-width: 100%;
+    line-height: 1.6;
+    /* text-align: center; */
+  }
+  /* About Section End */
+  /* protofolio section start */
+  .protofolio .container .boxs {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 10px;
+    margin-top: 50px;
+    transform: translateY(0);
+  }
+  /* protofolio section end */
+  /* contact section start */
+  .contact .container .main-contact {
+    margin-top: 25%;
+  }
+  .contact .container .main-contact .image {
+    display: none;
+  }
+  .contact .container .main-contact .main-form {
+    width: 100%;
+  }
+  .contact .container .main-contact .main-form input {
+    width: 100%;
+  }
+  .contact .container .main-contact .main-form textarea {
+    width: 100%;
+    line-height: 1.6;
+  }
+  /* contact section End */
+}
+/* -------------------------------Mobile Media End------------------------------- */

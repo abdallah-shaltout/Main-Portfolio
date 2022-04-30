@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* font-family: 'Montserrat', sans-serif; */
+
+:root {
+  --ycolor: #e8cf7d;
+  --y2color: #dfb267;
+  --gcolor: #71c8bc;
+  --pcolor: #ae96be;
+  --bcolor: #88b0cd;
+  --rcolor: #de8479;
+  --box-shadow1: 0 10px 25px rgba(92,99,105,.2);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html
+{
+    scroll-behavior: smooth !important;
+}
+body
+{
+    font-family: 'Montserrat', sans-serif;
+}
+ul
+{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/* start compounts */
+.special-head
+{
+    width: fit-content;
+    margin: 0 auto;
+}
+.special-head h1
+{
+    font-size: 60px;
+    font-weight: 800;
+    color: #f7f7f7;
+    text-transform: capitalize;
+}
+.services,
+.about,
+.protofolio,
+.contact
+{
+    min-height: 100vh;
+}
+.home
+{
+    min-height: 553px;
+}
+/* end compounts */
+.container {
+  padding: 0 10px;
+  margin: 0 auto;
+  width: 80%;
+}
+/* start header */
+.header
+{
+    background-color: var(--ycolor);
+}
+.header .container
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.header .container .logo
+{
+    text-transform: uppercase;
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header .container .nav-bar
+{
+    display: flex;
+}
+.header .container .nav-bar > li > a
+{
+    margin-right: 30px;
+    height: 72px;
+    color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header .container .nav-bar > li > a:hover
+{
+    color: #eee;
+}
+/* end header */
+/* start home */
+.home
+{
+    background-color: var(--ycolor);
+    min-height: calc(100vh - 72px);
+}
+.home .container .info
+{
+    width: 600px;
+}
+.home .container .info h1
+{
+    color: white;
+    font-size: 80px;
+    text-transform: capitalize;
+    font-weight: 800;
+    line-height: 1.2;
+}
+.home .container .info p
+{
+    color: #f7f7f7;
+    font-size: 20px;
+    max-width: 500px;
+    margin-top: 20px;
+}
+/* end home */
+/* start services */
+.services
+{
+    background-color: var(--gcolor);
+    min-height: 100vh;
+}
+.services .container .boxs
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    gap: 20px;
+    height: fit-content;
+    margin-top: calc(50vh - 72px);
+    transform: translateY(-50%);
+}
+.services .container .boxs .box
+{
+    background-color: white;
+    height: 320px;
+    border-radius: 8px;
+}
+/* end services */
+/* start about */
+.about
+{
+    background-color: var(--pcolor);
+}
+.about .container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+}
+.about .container .info
+{
+    flex: 1;
+    padding: 20px;
+}
+.about .container .info h2
+{
+    font-size: 60px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: white;
+}
+.about .container .info p
+{
+    font-size: 20px;
+    color: #f7f7f7;
+    line-height: 1.6;
+    max-width: 450px;
+    opacity: 0.9;
+}
+.about .container .image
+{
+    width: 400px;
+    height: 500px;
+    background-color: white;
+    border-radius: 8px;
+}
+/* end about */
+/* start protofolio */
+.protofolio
+{
+    background-color: var(--bcolor);
+}
+.protofolio .container
+{
+    height: 100%;
+}
+.protofolio .container .boxs
+{
+    display: grid;
+    grid-template-columns: repeat(4,230px);
+    gap: 20px;
+    margin-top: calc(50vh - 72px);
+    transform: translateY(-50%);
+}
+.protofolio .container .boxs .box
+{
+    height: 150px;
+    background-color: white;
+    border-radius: 8px;
+}
+.protofolio .container .boxs .more
+{
+    overflow: hidden;
+    background-color: transparent;
+}
+.protofolio .container .boxs a
+{
+    background-color: rgba(255, 255, 255, .6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+    height: 100%;
+    width: 100%;
+    transition: 0.5s ease-in-out;
+}
+.protofolio .container .boxs a:hover
+{
+    color: #777;
+    background-color: rgba(255, 255, 255, .8);
+}
+/* end protofolio */
+/* start contact */
+.contact
+{
+    background-color: var(--ycolor);
+}
+.contact .container .main-contact
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contact .container .main-contact .image
+{
+    height: 420px;
+    width: 350px;
+    background-color: white;
+    border-radius: 8px;
+    position: relative;
+    z-index: 2;
+}
+.contact .container .main-contact .image img
+{
+    width: 100%;
+    height:100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.contact .container .main-contact .image::before
+{
+    content: '';
+    position: absolute;
+    background-color: var(--rcolor);
+    width: 150px;
+    height: 480px;
+    margin-top: -30px;
+    right: 0;
+    transform: translateX(50%);
+    z-index: -1;
+}
+.contact .container .main-contact .main-form input:focus,
+.contact .container .main-contact .main-form textarea:focus
+{
+    outline: none;
+    background-color: rgba(255, 255, 255, 1);
+}
+.yname
+{
+    text-transform: capitalize;
+}
+.contact .container .main-contact .main-form input
+{
+    display: block;
+    border: 0;
+    width: 315px;
+    height: 52px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, .7);
+}
+.contact .container .main-contact .main-form textarea
+{
+    border: 0;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, .7);
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+.contact .container .main-contact .main-form textarea::placeholder
+{
+    font-size: 15px;
+}
+.contact .container .main-contact .main-form .submit
+{
+    opacity: 1;
+    background-color: var(--gcolor);
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+}
+.contact .container .main-contact .main-form .submit:hover
+{
+    background-color: #5b9e95;
+}
+/* end contact */
+/* Up Button */
+.up-arrow
+{
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    padding: 20px;
+    max-width: 40px;
+    max-height: 40px;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--y2color);
+    border-radius: 8px;
+    transition: transform 0.5s 0.3s,background-color 0.3s ;
+    z-index: 999;
+}
+.up-arrow:hover
+{
+    transform: translateY(-10px);
+    background-color: var(--rcolor);
+}
+/* Up Button */
